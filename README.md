@@ -7,15 +7,19 @@ Forked from Atomicorp Official Docker Image
 All credit goes to Atomicorp (and DanParriott et al).
 
 **Launch:**
-```docker run -d -p 1514:1514/udp -p 1515:1515/tcp --name ossec-server <image>```
+```
+docker run -d -p 1514:1514/udp -p 1515:1515/tcp --name ossec-server uqlibrary/ossec
+```
 
 
 **Launch with a specified Volume:**
 ```
 docker volume create ossec-data
-docker run -d -p 1514:1514/udp -p 1515:1515/tcp -v ossec-data:/var/ossec/data --name ossec-server atomicorp/ossec-docker
+docker run -d -p 1514:1514/udp -p 1515:1515/tcp -v ossec-data:/var/ossec/data --name ossec-server uqlibrary/ossec
 ```
 
 
 **Attach to running container:**
-```docker exec -it ossec-server  bash```
+```
+docker exec -it ossec-server  bash
+```
