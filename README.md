@@ -11,8 +11,10 @@ All credit goes to Atomicorp (and DanParriott et al).
 
 
 **Launch with a specified Volume:**
-```docker volume create ossec-data```
-```docker run -d -p 1514:1514/udp -p 1515:1515/tcp -v ossec-data:/var/ossec/data --name ossec-server atomicorp/ossec-docker```
+```
+docker volume create ossec-data
+docker run -d -p 1514:1514/udp -p 1515:1515/tcp -v ossec-data:/var/ossec/data --name ossec-server atomicorp/ossec-docker
+```
 
 
 **Attach to running container:**
